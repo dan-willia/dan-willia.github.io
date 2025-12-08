@@ -21,7 +21,7 @@
 title: Daniel Williams 
 email: dawi2291@proton.me
 description: Daniel Williams's github pages 
-baseurl: /dan-willia.github.io/ # the subpath of your site, e.g. /blog
+baseurl: "" # the subpath of your site, e.g. /blog
 url: https://dan-willia.github.io  
 # twitter_username: jekyllrb
 github_username: dan-willia 

@@ -143,6 +143,6 @@ This property may seem trivial on a group with just two elements. But it can be 
 
 Check out these other articles for more info.
 
-- [A more mathy blog post](https://www.themathcitadel.com/articles/group-theory-xor.html)
+- [A more mathy blog post on group theory and XOR](https://www.themathcitadel.com/articles/group-theory-xor.html)
 - [XOR and unbreakable encryption](https://en.wikipedia.org/wiki/One-time_pad)
 - [XOR and information recovery](https://en.wikipedia.org/wiki/Parity_bit)

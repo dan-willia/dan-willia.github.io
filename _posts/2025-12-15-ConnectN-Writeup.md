@@ -11,7 +11,7 @@ This project was part of a Programming Workshop class at CU Boulder focusing on 
 
 __Built with C++ and Qt 6.3.9__
 
-[GitHub repository](https://dan-willia.github.io){:target="_blank"}
+[GitHub repository](https://github.com/dan-willia/ConnectN.git){:target="_blank"}
 
 [YouTube demo](https://youtu.be/oc9h_X-DQfA){:target="_blank"}:
 [![Demo image](/assets/ConnectN.png)](https://youtu.be/oc9h_X-DQfA){:target="_blank"}
@@ -25,4 +25,4 @@ Project features
 - custom QObject
 - MVC design
 
-This project was developed in two weeks given a description of the game rules.
+This project was developed in two weeks following a description of the game rules.

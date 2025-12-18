@@ -2,7 +2,7 @@
 layout: post
 title: "Group Theory and XOR"
 date: 2025-12-14
-katex: true
+math: true
 categories: math
 ---
 
@@ -11,7 +11,7 @@ I'm a serial learner. For fun I'm taking a math course through the Open Universi
 ---
 # Groups
 
-Group theory studies groups. A group can be written as a tuple: $(G, \circ)$. 
+Group theory studies groups. A group can be written as a tuple: $$(G, \circ)$$. 
 
 The first item, $G$, is a set of of elements $$ \{g_1, g_2, ...\} $$.
 

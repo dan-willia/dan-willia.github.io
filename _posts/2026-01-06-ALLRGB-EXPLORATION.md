@@ -30,7 +30,7 @@ def rgb_to_plane():
 
 The basic idea is that there are `256*256*256 = 16777216` rgb colors, and since `16777216` is a square number, all the colors can fit exactly into a `4096x4096` matrix.
 
-This algorithm gives us a one-to-one mapping from RGB colors to a square matrix, but it doesn't tell us where, given a color, where it is in the matrix; nor does it tell us, given a position in the matrix, what RGB color it is. Let's find those functions. 
+This algorithm gives us a one-to-one mapping from RGB colors to a square matrix, but it doesn't tell us where, given an RGB tuple, it is in the matrix; nor does it tell us, given a position in the matrix, what RGB color it is. Let's find those functions. 
 
 Let's tackle the `rgb -> ij` direction first.
 
@@ -143,7 +143,7 @@ Finally, here's the image that's created using the `rgb_to_plane` scheme and the
 
 ![allrgb](/assets/allrgb.png)
 
-I've inserted black lines at `row = 2032` and `col = 3206` to make it easier to identify the position `(3206,2032)` in the image. And in the zoomed-in screenshot below, I've removed the lines and just blacked-out the color `(200,103,240)` (a shade of purple), which occurs at the predicted position:
+Yep, that's (almost) all 16777216 RGB colors -- I say "almost" because I've inserted black lines at `row = 2032` and `col = 3206` to make it easier to identify the position `(3206,2032)` in the image. And in the zoomed-in screenshot below, I've removed the lines and just blacked-out the color `(200,103,240)` (a shade of purple), which occurs at the predicted position:
 
 ![allrgb_pixel](/assets/allrgb_pixel.png)
 

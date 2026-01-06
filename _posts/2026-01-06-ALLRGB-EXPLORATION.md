@@ -71,11 +71,11 @@ Using the scheme of the `rgb_to_plane` algorithm, we obtain the following mappin
 etc.
 ``` 
 
-We notice that the tuples on the left can be thought of as encoding three-digit 4-bit numbers, and the tuples on the right as encoding two-digit 8-bit numbers.
+We notice that the tuples on the left can be thought of as encoding three-digit base 4 numbers, and the tuples on the right as encoding two-digit base 8 numbers.
 
-For example, we can write `(0,1,3)` as $$(013)_4$$, which in base 10 is `4^2*0 + 4^1*1 + 4^0*3 = 7`; and `(0,7)` as $$(07)_8$$, which in base 10 is `8^1*0 + 8^0*7 = 7`. 
+For example, we can write `(0,1,3)` as $$(013)_4$$, which in base 10 is `4^2*0 + 4^1*1 + 4^0*3 = 7`; and `(0,7)` as $$(07)_8$$, which in base 10 is likewise `8^1*0 + 8^0*7 = 7`. 
 
-So we can think of this problem as converting three-digit 4-bit numbers to two-digit 8-bit numbers. 
+So we can think of this problem as converting three-digit base 4 numbers to two-digit base 8 numbers. 
 
 There is undoubtedly a clever way to do the conversion efficiently, but it doesn't reveal itself to me immediately, so I'm going to take the long way and convert the left column to base 10, then convert that to base 8.
 
@@ -119,9 +119,9 @@ Its base 10 representation is 8*4 + 6 = 38.
 
 We want to convert this to base 4. The rightmost digit, `z`, is given by 38 mod 4 = 2. 
 
-Now `floor(38/4) = 9` tells us how many times 4 divides 38. But this won't always yield a valid 4-bit number, since we have two digits (`x` and `y`) to work with, so we need to apply the same conversion once more: `9 mod 4 = 1` and `floor(9/4) = 2`. Thus `x = 2` and `y = 1`, and the `xyz` color is `(2,1,2)`. 
+Now `floor(38/4) = 9` tells us how many times 4 divides 38. But this won't always yield a valid base 4 number, since we have two digits (`x` and `y`) to work with. So we need to apply the same conversion once more: `9 mod 4 = 1` and `floor(9/4) = 2`. Thus `x = 2` and `y = 1`, and the `xyz` color is `(2,1,2)`. 
 
-Check: `4^2*2 + 4*1 + 2 = 32 + 4 + 2 = 38`. 
+Check: `4^2*2 + 4*1 + 2 = 32 + 4 + 2 = 38`, as expected. 
 
 Replacing the bases, we can write the following function:
 
@@ -135,7 +135,9 @@ def ij_to_rgb(i,j):
   return r, g, b
 ```
 
-Check: `ij_to_rgb(3206,2032)` returns `(200,103,240)` as expected.
+Check: `ij_to_rgb(3206,2032)` returns `(200,103,240)`, as expected.
+
+---
 
 Finally, here's the image that's created using the `rgb_to_plane` scheme and the `PIL` library:
 
@@ -147,4 +149,4 @@ I've inserted black lines at `row = 2032` and `col = 3206` to make it easier to 
 
 ---
 
-I discovered this problem in Part II of _Programming Principles and Practice_ by Stroustroup. It fascinated me and led me to the website [allrgb.com](https://allrgb.com), where you can submit your own solution to the all rgb problem.
+I discovered this problem in Part II of _Programming Principles and Practice_ by Stroustrup. It fascinated me and led me to the website [allrgb.com](https://allrgb.com), where you can submit your own solution to the all rgb problem.
